@@ -100,6 +100,7 @@ export default {
    .functionalH4
      titleH()
    .condition
+     margin-bottom 20px
      line-height 28px
      text-align right
      overflow hidden

@@ -12,9 +12,14 @@ export default {
 
 <style lang="stylus" rel="stylesheet/stylus">
   @import "common/stylus/variable"
-  #app
+  html,body
     position relative
-    width 100%
+    overflow hidden
     height 100%
-    overflow auto
+    width 100%
+    #app
+      position relative
+      width 100%
+      height 100%
+      overflow auto
 </style>
