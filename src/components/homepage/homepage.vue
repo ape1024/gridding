@@ -20,7 +20,9 @@ export default {
     navigation
   },
   created () {
-    this.$router.push('/homepage/functional')
+    let routerData = sessionStorage.getItem('key') ? sessionStorage.getItem('key') : 'operationSetting'
+    console.log(sessionStorage.getItem('key'))
+    this.$router.push(`/homepage/${routerData}`)
   }
 }
 </script>

@@ -1,12 +1,81 @@
-// 标题 字体
+//  字体颜色
+$color-Text = #fff
+$color-Title = #303133
+$color-Convention = #606266
+$color-Minor = #909399
+//字体
+$font-size-mini = 14px
+$font-size-small = 16px
+$font-size-medium = 18px
+$font-size-max = 20px
+//  背景
+$background-FFF = #fff
+$background-Brand = #409EFF
+$background-Blueness = #B3D8FF
+$background-Wathet = #D9ECFF
+$background-Success = #67C23A
+$background-Warning = #E6A23C
+$background-Danger = #F56C6C
+$background-Info = #909399
+//  边框颜色
+$border-Stair = #DCDFE6
+$border-Second = #E4E7ED
+$border-Three = #EBEEF5
+$border-Four = #F2F6FC
+// 层级
+$z-index-mini = -1
+$z-index-small-s = 1
+$z-index-small = 10
+$z-index-medium = 100
+$z-index-medium-x = 1000
+$z-index-large = 10000
+$z-index-large-x = 100000
+$z-index-max = 1000000
+
+
+
+// 标题
 titleH()
   width 100%
+  color $color-Title
   margin 0 0 30px
   font-weight bold
   text-align center
-  font-size 20px
+  font-size $font-size-max
 
+initialize()
+  overflow hidden
+  position relative
+  width 100%
 subject()
   overflow hidden
   position relative
   margin 30px
+
+module()
+  position fixed
+  top 0
+  left 0
+  background rgba(000, 000, 000, .2)
+  z-index $z-index-medium
+  height 100%
+  width 100%
+
+moduleTitle()
+  width 100%
+  color $color-Title
+  margin 0 0 30px
+  font-weight bold
+  text-align center
+  font-size $font-size-medium
+
+moduleSubject()
+  overflow hidden
+  position relative
+  margin 0 20px
+
+modeleoPeration()
+  position relative
+  margin 20px 0
+  text-align center
+  overflow hidden

@@ -8,9 +8,11 @@ import store from './store'
 import ElementUI from 'element-ui'
 import './common/stylus/index.styl'
 import 'element-ui/lib/theme-chalk/index.css'
+import animated from 'animate.css'
 Vue.config.productionTip = false
 Vue.prototype.axios = axios
 Vue.use(ElementUI)
+Vue.use(animated)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

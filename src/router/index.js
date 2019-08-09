@@ -1,14 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import homepage from '../components/homepage/homepage'
-import functional from '../components/functional/functional'
+import operationSetting from '../components/operationSetting/operationSetting'
+import messageSettings from '../components/messageSettings/messageSettings'
 import login from '../components/login/login'
-import region from '../components/region/region'
+import typographicSettings from '../components/typographicSettings/typographicSettings'
 import role from '../components/role/role'
-import scheduling from '../components/scheduling/scheduling'
+import taskManagement from '../components/taskManagement/taskManagement'
 import subscriber from '../components/subscriber/subscriber'
 import trainNumber from '../components/trainNumber/trainNumber'
-import working from '../components/working/working'
+
+import management from '../components/management/management'
 Vue.use(Router)
 
 export default new Router({
@@ -26,19 +28,19 @@ export default new Router({
       component: homepage,
       children: [
         {
-          path: 'functional',
-          name: 'functional',
-          component: functional
+          path: 'operationSetting',
+          name: 'operationSetting',
+          component: operationSetting
         },
         {
-          path: 'functional',
-          name: 'functional',
-          component: functional
+          path: 'messageSettings',
+          name: 'messageSettings',
+          component: messageSettings
         },
         {
-          path: 'region',
-          name: 'region',
-          component: region
+          path: 'typographicSettings',
+          name: 'typographicSettings',
+          component: typographicSettings
         },
         {
           path: 'role',
@@ -46,9 +48,9 @@ export default new Router({
           component: role
         },
         {
-          path: 'scheduling',
-          name: 'scheduling',
-          component: scheduling
+          path: 'taskManagement',
+          name: 'taskManagement',
+          component: taskManagement
         },
         {
           path: 'subscriber',
@@ -61,9 +63,9 @@ export default new Router({
           component: trainNumber
         },
         {
-          path: 'working',
-          name: 'working',
-          component: working
+          path: 'management',
+          name: 'management',
+          component: management
         }
       ]
     }

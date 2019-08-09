@@ -1,23 +1,9 @@
 <template>
   <div class="functional">
-    <!--职能组-->
+    <!--用户管理-->
     <div class="subject">
       <h4 class="functionalH4">{{title}}</h4>
       <div class="condition">
-        <span class="conditionSpan">部门: </span>
-        <span class="conditionSpan">
-           <el-select size="mini" v-model="value" clearable placeholder="请选择">
-          <el-option
-            v-for="item in options"
-            :key="item.value"
-            :label="item.label"
-            :value="item.value">
-          </el-option>
-        </el-select>
-        </span>
-        <span class="conditionSpan">
-           <el-button size="mini" type="primary">查询</el-button>
-        </span>
         <span>
            <el-button size="mini" type="primary">添加</el-button>
         </span>
@@ -68,7 +54,7 @@
 
 <script>
 export default {
-  name: 'functional',
+  name: 'management',
   data () {
     return {
       title: '',
@@ -83,30 +69,30 @@ export default {
     }
   },
   created () {
-    this.title = '职能组信息列表'
+    this.title = '用户组管理信息列表'
   }
 }
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
   @import "../../common/stylus/variable"
-.functional
-  overflow hidden
-  position relative
-  height 100%
-  width 100%
- .subject
-   subject()
-   .functionalH4
-     titleH()
-   .condition
-     margin-bottom 20px
-     line-height 28px
-     text-align right
-     overflow hidden
-     .conditionSpan
-       margin-right 10px
-   .tabulation
-     overflow hidden
-     width 100%
+  .functional
+    overflow hidden
+    position relative
+    height 100%
+    width 100%
+  .subject
+    subject()
+    .functionalH4
+      titleH()
+    .condition
+      margin-bottom 20px
+      line-height 28px
+      text-align right
+      overflow hidden
+      .conditionSpan
+        margin-right 10px
+    .tabulation
+      overflow hidden
+      width 100%
 </style>
