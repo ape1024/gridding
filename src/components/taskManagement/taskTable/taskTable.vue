@@ -171,6 +171,8 @@ export default {
     overflow hidden
     position relative
     display flex
+    cursor pointer
+    transition .2s
   .contentTd
     width 200px
     box-sizing border-box
@@ -201,4 +203,6 @@ export default {
     padding 10px
     position relative
     overflow hidden
+  .contentliUl:hover
+     background $background-hover
 </style>

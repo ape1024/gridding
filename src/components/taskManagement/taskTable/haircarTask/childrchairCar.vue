@@ -126,6 +126,8 @@ export default {
     overflow hidden
     display flex
     width 100%
+    transition .2s
+    cursor pointer
     border-bottom 1px solid $border-Three
   .ContentUl li:last-child
     border-right none
@@ -134,4 +136,6 @@ export default {
     box-sizing border-box
     padding 10px
     overflow hidden
+  .ContentUl:hover
+     background $background-hover
 </style>

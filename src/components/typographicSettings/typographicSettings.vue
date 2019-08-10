@@ -55,7 +55,6 @@ export default {
     }
   },
   methods: {
-
   },
   created () {
     this.title = '排班设置'

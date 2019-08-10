@@ -118,7 +118,11 @@ export default {
   .ContentUl
     overflow hidden
     display flex
+    cursor pointer
+    transition .2s
     width 100%
   .ContentUl li:last-child
     border-right none
+  .ContentUl:hover
+     background $background-hover
 </style>
