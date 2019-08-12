@@ -50,12 +50,12 @@
             </li>
           </ul>
           <ul class="tableul tableullast">
-            <li class="tableli">
+            <!--<li class="tableli">-->
 
-            </li>
-            <li :key="index" v-for="(item, index) in predestination" class="tableli">
+            <!--</li>-->
+            <!--<li :key="index" v-for="(item, index) in predestination" class="tableli">-->
 
-            </li>
+            <!--</li>-->
           </ul>
         </div>
       </div>
@@ -109,8 +109,9 @@ export default {
     position relative
     width 100%
   .constraintRight
-    float right
-    width 880px
+    float left
+    min-width 1570px
+    max-width 1570px
     position relative
   .constraintOperation
     text-align left

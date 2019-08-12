@@ -1,21 +1,10 @@
 <template>
   <div class="timeSign">
     <div class="timesignLine"></div>
-    <div class="expression">
-
-    </div>
-    <!--<div class="expression expressionOne"></div>-->
-    <!--<div class="expression expressionTwo"></div>-->
-    <!--<div class="expression expressionThree"></div>-->
-    <!--<div class="expression expressionFour"></div>-->
-    <!--<div class="expression expressionFive"></div>-->
-    <!--<div class="expression expressionSix"></div>-->
-    <!--<div class="expression expressionSeven"></div>-->
-    <!--<div class="expression expressionEight"></div>-->
-    <!--<div class="expression expressionNine"></div>-->
-    <!--<span class="expressionPOne">06:00</span>-->
-    <!--<span class="expressionPTwo">18:00</span>-->
-    <!--<span class="expressionPThree">24:00</span>-->
+    <div :key="index" v-for="(item, index) in timing" class="expression" :style="setPosition(index)"></div>
+    <span class="expressionPOne">06:00</span>
+    <span class="expressionPTwo">18:00</span>
+    <span class="expressionPThree">24:00</span>
   </div>
 </template>
 
@@ -25,7 +14,7 @@ export default {
   data () {
     return {
       canvasIndex: '',
-      timing: 23
+      timing: 24
     }
   },
   created () {
@@ -34,6 +23,15 @@ export default {
   methods: {
     ergodic () {
 
+    },
+    setPosition (index) {
+      //  宽度230
+      let position = index * 10
+      if (index === 5 || index === 17) {
+        return `left: ${position}px;background: red`
+      } else {
+        return `left: ${position}px`
+      }
     }
   },
   mounted () {
@@ -51,16 +49,16 @@ export default {
     position relative
   .timesignLine
     position absolute
-    top 60%
+    top 15px
     height 1px
     background $background-Info
     width 100%
   .expression
     position absolute
-    top 0
+    top 16px
     background $background-Info
     box-sizing border-box
-    height 30px
+    height 10px
     width 1px
   .expressionOne
     left 0
@@ -82,11 +80,11 @@ export default {
     left 196px
   .expressionPOne
     position absolute
-    left 37px
+    left 35px
     top 0
   .expressionPTwo
     position absolute
-    left 60px
+    left 155px
     top 0
   .expressionPThree
     position absolute
