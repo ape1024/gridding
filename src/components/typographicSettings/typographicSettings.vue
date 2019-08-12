@@ -1,6 +1,6 @@
 <template>
   <div class="typographic">
-    <!--区域-->
+    <!--排班设置-->
     <div class="subject">
       <h4 class="functionalH4">{{title}}</h4>
       <div class="condition">
@@ -39,12 +39,20 @@
         </el-table>
       </div>
     </div>
+    <!--弹出框-->
+    <div class="module">
+      <constraintMechanism></constraintMechanism>
+    </div>
   </div>
 </template>
 
 <script>
+import constraintMechanism from './constraintMechanism/constraintMechanism'
 export default {
   name: 'typographicSettings',
+  components: {
+    constraintMechanism
+  },
   data () {
     return {
       title: '',
@@ -77,4 +85,6 @@ export default {
     overflow hidden
   .tabulation
     initialize()
+  .module
+    module()
 </style>

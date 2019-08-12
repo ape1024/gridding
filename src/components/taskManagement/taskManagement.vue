@@ -10,7 +10,7 @@
       </div>
     </div>
     <!--组件-->
-    <div class="">
+    <div class="module">
 
     </div>
   </div>
